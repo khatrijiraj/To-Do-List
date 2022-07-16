@@ -15,16 +15,18 @@
   </div>
 
   <div class="box">
-    <% for(var i=0; i<newListItems.length; i++){ %>
-    <div class="item container">
-      <input type="checkbox">
-      <p><%= newListItems[i] %></p>
+    <% newListItems.forEach(function(item){ %>
+    <div class="item">
+      <form class="dlt" action="/delete" method="post">
+        <input type="checkbox" name="checkbox" value="<%=item._id%> " onchange="this.form.submit()">
+        <p><%=item.name%></p>
+      </form>
     </div>
-    <% } %>
+    <% }) %>
 
     <form class="item" action="/" method="post">
       <input type="text" name="newToDo" placeholder="Add more item" autocomplete="off" />
-      <button type="submit" name="list" value=<%= listTitle %>>+</button>
+      <button class="add" type="submit" name="list" value=<%= listTitle %>>+</button>
     </form>
   </div>
 </body>
