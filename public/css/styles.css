@@ -50,7 +50,7 @@ p {
   margin: 0;
   padding: 20px;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 300;
   color: #00204a;
 }
 
@@ -68,7 +68,7 @@ form.dlt {
   padding: 10px;
 }
 
-button.add {
+button {
   min-height: 50px;
   width: 50px;
   border-radius: 100%;
@@ -76,6 +76,7 @@ button.add {
   background-color: #a683e3;
   color: #fff;
   font-size: 30px;
+  cursor: pointer;
 }
 
 input[type="text"] {
